@@ -2,6 +2,24 @@ const express = require('express');
 const session = require('express-session');
 
 const app = express();
+
+const multer = require('multer');
+const mimeTypes = require('mime-types');
+
+const storage = multer.diskStorage({
+    destination: 'uploads/',
+    filename: function(req, file, cb){
+        // cb("", Date.now() + "." + mimeTypes.extension(file.mimetype));
+        cb("", "avatar" + "." + mimeTypes.extension(file.mimetype));
+
+    }
+
+});
+const upload = multer({
+    storage: storage
+}); 
+
+
 app.use(session({ secret: 'secreto' }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -9,7 +27,7 @@ app.use(express.static('public'));
 
 const users = [];
 
-app.post('/signup', (req, res) => {
+app.post('/signup', upload.single('avatar'), (req, res) => {
     const { userName, password} = req.body;
 
     // validacion
