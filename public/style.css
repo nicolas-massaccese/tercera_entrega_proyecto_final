@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 60px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#bienvenida{
+    color: white;
+    size: 20px;
+}
+
+#avatar{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: blueviolet;
+    overflow: hidden;
+}
+
+#avatar img{
+    background-color: bisque;
+    height: 100%;
+}
+
+#desloguearse{
+    height: 30px;
+    width: 150px;
+    line-height: 30px;
+    top: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    size: 25px;
+    border-radius: 52px;
+    list-style: none;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    background-color: rgb(216, 188, 26);
+}
