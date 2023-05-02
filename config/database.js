@@ -1,7 +1,12 @@
 const mongoose = require('mongoose');
 
-const { mongoUser, mongoPass, mongoDb, mongoUri } = require('../enviroment.js');
+const { mongoUri } = require('./enviroment.js');
 
+
+
+// mongoose.connect(mongoUri, {})
+//     .then(db = console.log('database is connected'))
+//     .catch(err => console.error(err))
 
 let isConnected;
 

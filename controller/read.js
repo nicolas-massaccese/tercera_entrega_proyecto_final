@@ -1,9 +1,8 @@
-const { Product } = require("../model/products");
-const { User } = require("../model/users");
+const { Product } = require("../models/product");
+const User  = require("../models/user");
 
 const productRead = async () => {
     const sortedProducts = await Product.find({})
-    // console.log(sortedProducts);
     return sortedProducts;
 };
 

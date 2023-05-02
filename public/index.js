@@ -24,6 +24,8 @@
 
 // getUserData('/signup', userNameOk)
 
+
+
 async function getData(url) {
     try {
     const response = await fetch(url);
@@ -66,4 +68,4 @@ async function getData(url) {
     }
 };
 
-getData('/home')
+getData('/profile')
