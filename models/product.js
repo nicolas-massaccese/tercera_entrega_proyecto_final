@@ -8,7 +8,7 @@ const productsSchema = new Schema( {
     nombre: { type: String, required: true },
     precio: { type: Number, required: true },
     foto: { type: String, required: true },
-    sotck: { type: Number, required: true },
+    stock: { type: Number, required: true },
 })
 
 const Product = model('Product', productsSchema);

@@ -1,0 +1,2 @@
+artillery quick --count 50 -n 50 "http://localhost:3000/profile" > result_fork.txt
+artillery quick --count 50 -n 50 "http://localhost:8080/profile" > result_cluster.txt

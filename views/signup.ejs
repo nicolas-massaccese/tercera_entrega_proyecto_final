@@ -13,11 +13,24 @@
                         <% if (signupMessage.length > 0) { %>
                             <div class="alert alert-danger"><%=signupMessage%></div>
                         <% } %>
+                        
                         <div class="form-group">
-                            <input type="text" name="username" placeholder="Insert your username" class="form-control">
+                            <input type="text" name="email" placeholder="Insert your email" class="form-control">
                         </div>
                         <div class="form-group">
                             <input type="password" name="password" placeholder="Insert your password" class="form-control">                    
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="firstname" placeholder="Insert your name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="adress" placeholder="Insert your adress" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="age" placeholder="Insert your age" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Insert your phone" class="form-control">
                         </div>
                         <div class="form-group">
                             <input type="file" name="avatar" id="avatar" class="form-control">

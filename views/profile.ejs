@@ -1,40 +1,26 @@
 <%- layout('layouts/main.ejs')  %>
 
 
-    <main> 
-        <h1 >Hola <%= user %></h1>
         <div id="productList">
-
+    
             <%products.forEach(product => {%>
 
                 <article class="cardBox">
-                    <figure class="fotoProducto">
+                    <!-- <figure class="fotoProducto">
                         <img src="${foto}" alt="">
-                    </figure>
-                    <div class="marcoSkew">
+                    </figure> -->
+                    <div class="encabezado">
                         <h4 class="modelo"><%= product.nombre %></h4>
                     </div>
                     
-                    <figure class="estrellaFigure">
-                        <img class="afueraCarrito" id="${_id}" src="assets/img/estrella_tienda.svg" alt="">
-                    </figure>
-                    
-                    <div class="detalle">
-                        <img class="afueraCarrito" id="${_id}" src="assets/img/sumar_a_carrito.svg" alt="">
-                    </div>
-
                     <div class="caracteristicas">
-                        <p class="tipo"><%= product.descripcion %></p>
+                        <h5 class="tipo"><%= product.descripcion %></h5>
                         <div class="barra"></div>
-                        <p class="medida">${<%= product.tamanio %>}</p>
+                        <p class="stock">Stock:<%= product.stock %></p>
                     </div>
-                    <p class="precio">${<%= product.precio %>}</p>
-                    <button class="addProduct">Agregar a carrito</button>
+                    <p class="precio">$<%= product.precio %></p>
+                    <button class="btn btn-info btn-block mt4">Agregar a carrito</button>
                 </article>
 
                 <% }) %>
             </div>
-            
-    
-    </main>
-

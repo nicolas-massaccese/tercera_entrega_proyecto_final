@@ -1,30 +1,6 @@
 
-
-
-
-
-// async function getUserData(url, data) {
-//     try {
-//     const response = await fetch(url, {
-//         method: 'POST',
-//         body: JSON.stringify(data),
-//         header: {
-//             'Content-Type': 'application/json'
-//         }
-//     });
-    
-//     const responseData = await response.json();
-
-//     document.getElementById('bienvenida').innerHTML += responseData
-//     console.log(responseData);
-//     } catch (error) {
-//     console.error(error);
-//     }
-// };
-
-// getUserData('/signup', userNameOk)
-
-
+let input = document.getElementById('phone');
+window.intlTelInput(input,{});
 
 async function getData(url) {
     try {
@@ -38,24 +14,17 @@ async function getData(url) {
 
         htmlString +=`<article class="cardBox">
                                     <figure class="fotoProducto">
-                                        <img src="${foto}" alt="">
+                                        <img src="../uploads/avatar.jpeg" alt="">
                                     </figure>
-                                    <div class="marcoSkew">
+                                    <div class="encabezado">
                                         <h4 class="modelo">${nombre}</h4>
                                     </div>
-                                    
-                                    <figure class="estrellaFigure">
-                                        <img class="afueraCarrito" id="${_id}" src="assets/img/estrella_tienda.svg" alt="">
-                                    </figure>
-                                    
-                                    <div class="detalle">
-                                        <img class="afueraCarrito" id="${_id}" src="assets/img/sumar_a_carrito.svg" alt="">
-                                    </div>
+                                
 
                                     <div class="caracteristicas">
                                         <p class="tipo">${descripcion}</p>
                                         <div class="barra"></div>
-                                        <p class="medida">${tamanio}</p>
+                                        <p class="medida">${stock}</p>
                                     </div>
                                     <p class="precio">${precio}</p>
                                     <button class="addProduct">Agregar a carrito</button>
@@ -69,3 +38,5 @@ async function getData(url) {
 };
 
 getData('/profile')
+
+
